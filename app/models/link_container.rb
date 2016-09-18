@@ -1,0 +1,2 @@
+class LinkContainer < ApplicationRecord
+end

@@ -1,4 +1,4 @@
 class Link < ApplicationRecord
-  validate :title, presense: true
-  belongs_to :link_holder
+  validates :title, presence: true
+  belongs_to :link_list
 end

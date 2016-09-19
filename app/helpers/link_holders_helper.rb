@@ -1,0 +1,2 @@
+module LinkHoldersHelper
+end

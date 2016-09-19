@@ -10,19 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160918114632) do
+ActiveRecord::Schema.define(version: 20160918182418) do
 
-  create_table "link_containers", force: :cascade do |t|
+  create_table "link_lists", force: :cascade do |t|
     t.string   "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
   end
 
   create_table "links", force: :cascade do |t|
     t.string   "title"
     t.text     "url"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "link_list_id"
   end
 
   create_table "users", force: :cascade do |t|

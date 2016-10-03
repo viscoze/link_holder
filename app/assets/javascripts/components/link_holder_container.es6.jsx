@@ -15,6 +15,18 @@ class LinkHolderContainer extends React.Component {
     .catch(error => this.setState({ error }));
   }
 
+  deleteLink(linkId) {
+    fetch({
+      url: `/links/${linkId}`,
+      method: 'DELETE',
+    })
+    .then()
+  }
+
+  deleteLinkList(linkListId) {
+
+  }
+
   componentWillMount() {
     this.getLinkHolders();
   }
